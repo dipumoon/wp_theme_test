@@ -19,7 +19,6 @@ $header_text_color = null;
 if ( display_header_text() && ! OCEAN_EXTRA_ACTIVE && ! class_exists( 'Ocean_Extra_Theme_Panel' ) ) {
 	$header_text_color = ' style=color:#' . get_header_textcolor() . ';';
 }
-
 ?>
 
 <?php do_action( 'ocean_before_logo' ); ?>
@@ -64,7 +63,7 @@ if ( display_header_text() && ! OCEAN_EXTRA_ACTIVE && ! class_exists( 'Ocean_Ext
 		} else {
 			if ( display_header_text() === true ) {
 				?>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="site-title site-logo-text" <?php echo esc_attr( $header_text_color ); ?>><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="site-title site-logo-text <?php echo (is_home() || is_front_page()) ? "header-logo-white" : "";?>" <?php echo esc_attr( $header_text_color ); ?>><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a>
 				<?php
 				do_action( 'ocean_after_site_title' );
 			}
@@ -88,5 +87,8 @@ if ( display_header_text() && ! OCEAN_EXTRA_ACTIVE && ! class_exists( 'Ocean_Ext
 	?>
 
 </div><!-- #site-logo -->
-
+<?php 
+if ( (is_home() || is_front_page()) && is_active_sidebar( 'header-top-widget' ) ) : ?>
+		<?php dynamic_sidebar( 'header-top-widget' ); ?>
+<?php endif;?>
 <?php do_action( 'ocean_after_logo' ); ?>

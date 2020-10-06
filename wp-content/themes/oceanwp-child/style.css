@@ -1,0 +1,61 @@
+/*
+Theme Name: OceanWP Child
+Theme URI: https://oceanwp.org/
+Description: OceanWP WordPress theme example child theme.
+Author: Nick
+Author URI: https://oceanwp.org/
+Template: oceanwp
+Version: 1.0
+*/
+
+/* Parent stylesheet should be loaded from functions.php not using @import */
+
+.widget-title{border-width:0;padding-left:0;}
+.oceanwp-widget-recent-posts-li,.widget_categories li,.widget_recent_entries li,.widget_archive li,.widget_recent_comments li,.widget-recent-posts-icons li,.site-footer .widget_nav_menu li{border-bottom:0}
+.oceanwp-widget-recent-posts-li:first-child,.widget_categories li:first-child,.widget_recent_entries li:first-child,.widget_archive li:first-child,.widget_recent_comments li:first-child,.widget-recent-posts-icons li:first-child,.site-footer .widget_nav_menu li:first-child{border-top:0}
+.widget_text.footer_top_widget {
+    background-color: #019cd4;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.footer_top_widget h1 {
+    margin: 0 0 0 150px;
+    color: #ffffff;
+    float: left;
+    text-transform: uppercase;
+}
+#site-logo #site-logo-inner a{
+	padding: 10px;
+    font-family: "Baumans", Sans-serif;
+    font-size: 59px;
+    margin-left: 120px;
+}
+.header-top-btn{
+    font-family: "Helvetica", Sans-serif;
+    background-color: #02010100;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    font-size: 13px;
+    padding: 6px 20px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    color: #fff;
+    float: right;
+    margin-right: 205px;
+}
+.header_top_widget{
+	padding-top: 45px;
+}
+.header-logo-white{
+	color: #fff;
+}
+@media screen and (min-width: 1200px)
+.footer_top_widget h3 {
+    margin: 0px 0% 0px 10% !important;
+    line-height: 1.9;
+}
+@media screen and (min-width: 1200px)
+.footer-top-section .button.button-appear.color-7.large {
+    margin-right: 5%;
+}
